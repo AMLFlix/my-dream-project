@@ -286,7 +286,7 @@ function animate() {
             dummy.position.y -= (0.15 + Math.random() * 0.02);
             dummy.position.x += Math.sin(elapsedTime + dummy.position.y * 0.5) * 0.05;
             if (instanced.type === 'photo') {
-                dummy.rotation.y += 0.005;
+                dummy.lookAt(camera.position);
             }
             if (instanced.type === 'heart') {
                 dummy.rotation.copy(camera.rotation);
